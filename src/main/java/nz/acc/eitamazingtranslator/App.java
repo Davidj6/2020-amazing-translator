@@ -12,7 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        //List for Languages
+        //List for German Languages
         List<String> germanTranslations = new ArrayList<>();
         germanTranslations.add("Einz");
         germanTranslations.add("Zwei");
@@ -24,56 +24,6 @@ public class App
         germanTranslations.add("Acht");
         germanTranslations.add("Neun");
         germanTranslations.add("Zehn");
-
-        List<String> frenchTranslations = new ArrayList<>();
-        frenchTranslations.add("Un");
-        frenchTranslations.add("Deux");
-        frenchTranslations.add("Trois");
-        frenchTranslations.add("Quatre");
-        frenchTranslations.add("Cinq");
-        frenchTranslations.add("Six");
-        frenchTranslations.add("Sept");
-        frenchTranslations.add("Huit");
-        frenchTranslations.add("Neuf");
-        frenchTranslations.add("Dix");4
-
-
-        System.out.println("What is the number to translate?");
-        Scanner scanner = new Scanner(System.in);
-        String numberisstring = scanner.nextLine();
-        Integer number = null;
-        try {
-            number = Integer.parseInt(numberisstring);
-            System.out.println(number);
-        }
-        catch (NumberFormatException nfe) {
-            System.out.println("The number had to be numeric");
-            System.exit(0);
-        }
-        System.out.println("What is the Language? (1- French, 2- German)");
-        String optionasstring = scanner.nextLine();
-        Integer option = null;
-        try {
-            option = Integer.parseInt(optionasstring);
-            System.out.println(option);
-        }
-        catch (NumberFormatException nfe) {
-            System.out.println("The number had to be numeric");
-            System.exit(0);
-        }
-        //Check option 1or 2
-
-        if (option == 1){
-            String translator = frenchTranslations.get(number-1);
-            System.out.println(translator);
-        }
-        else if (option == 2){
-            String translator = germanTranslations.get(number-1);
-            System.out.println(translator);
-        }
-        else {
-            System.out.println("Only French or German available!");
-        }
 
     }
 }

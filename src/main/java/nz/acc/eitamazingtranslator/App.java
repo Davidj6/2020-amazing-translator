@@ -25,6 +25,20 @@ public class App
         germanTranslations.add("Neun");
         germanTranslations.add("Zehn");
 
+        //List for French Languages
+        List<String> frenchTranslations = new ArrayList<>();
+        frenchTranslations.add("Un");
+        frenchTranslations.add("Deux");
+        frenchTranslations.add("Trois");
+        frenchTranslations.add("Quatre");
+        frenchTranslations.add("Cinq");
+        frenchTranslations.add("Six");
+        frenchTranslations.add("Sept");
+        frenchTranslations.add("Huit");
+        frenchTranslations.add("Neuf");
+        frenchTranslations.add("Dix");
+
+
     }
 }
 

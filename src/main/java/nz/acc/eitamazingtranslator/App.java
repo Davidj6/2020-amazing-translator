@@ -61,7 +61,18 @@ public class App
             System.out.println("The number had to be numeric");
             System.exit(0);
         }
-
+        //Check option 1or 2
+        if (option == 1){
+            String translator = frenchTranslations.get(number-1);
+            System.out.println(translator);
+        }
+        else if (option == 2){
+            String translator = germanTranslations.get(number-1);
+            System.out.println(translator);
+        }
+        else {
+            System.out.println("Only French or German available!");
+        }
     }
 }
 

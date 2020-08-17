@@ -38,6 +38,18 @@ public class App
         frenchTranslations.add("Neuf");
         frenchTranslations.add("Dix");
 
+        System.out.println("What is the number to translate(from 1 to 10)?");
+        Scanner scanner = new Scanner(System.in);
+        String numberisstring = scanner.nextLine();
+        Integer number = null;
+        try {
+            number = Integer.parseInt(numberisstring);
+            System.out.println(number);
+        }
+        catch (NumberFormatException nfe) {
+            System.out.println("The number had to be numeric");
+            System.exit(0);
+        }
 
     }
 }

@@ -50,6 +50,17 @@ public class App
             System.out.println("The number had to be numeric");
             System.exit(0);
         }
+        System.out.println("What is the Language? (1- French, 2- German)");
+        String optionasstring = scanner.nextLine();
+        Integer option = null;
+        try {
+            option = Integer.parseInt(optionasstring);
+            System.out.println(option);
+        }
+        catch (NumberFormatException nfe) {
+            System.out.println("The number had to be numeric");
+            System.exit(0);
+        }
 
     }
 }

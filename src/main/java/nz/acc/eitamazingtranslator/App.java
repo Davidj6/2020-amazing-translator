@@ -12,31 +12,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        //List for German Languages
-        List<String> germanTranslations = new ArrayList<>();
-        germanTranslations.add("Einz");
-        germanTranslations.add("Zwei");
-        germanTranslations.add("Drei");
-        germanTranslations.add("Vier");
-        germanTranslations.add("Fünf");
-        germanTranslations.add("Sechs");
-        germanTranslations.add("Sieben");
-        germanTranslations.add("Acht");
-        germanTranslations.add("Neun");
-        germanTranslations.add("Zehn");
+        TranslationDictionaries dictionaries=new TranslationDictionaries();
+        dictionaries.initilizeDictionaries();
 
-        //List for French Languages
-        List<String> frenchTranslations = new ArrayList<>();
-        frenchTranslations.add("Un");
-        frenchTranslations.add("Deux");
-        frenchTranslations.add("Trois");
-        frenchTranslations.add("Quatre");
-        frenchTranslations.add("Cinq");
-        frenchTranslations.add("Six");
-        frenchTranslations.add("Sept");
-        frenchTranslations.add("Huit");
-        frenchTranslations.add("Neuf");
-        frenchTranslations.add("Dix");
 
         System.out.println("What is the number to translate(from 1 to 10)?");
         Scanner scanner = new Scanner(System.in);
@@ -61,18 +39,17 @@ public class App
             System.out.println("The number had to be numeric");
             System.exit(0);
         }
+
         //Check option 1or 2
-        if (option == 1){
-            String translator = frenchTranslations.get(number-1);
-            System.out.println(translator);
+        try {
+            String translated=dictionaries.getTranslation(number-1,option);
+            System.out.println(translated);
+        } catch (LanguageNotAvailableException lnse) {
+            System.out.println("Language Not Supported!");
+        }catch (NumberOutOfRangeException noore) {
+            System.out.println("Numbers have to be between 1 and 10 inclusive!");
         }
-        else if (option == 2){
-            String translator = germanTranslations.get(number-1);
-            System.out.println(translator);
-        }
-        else {
-            System.out.println("Only French or German available!");
-        }
+
     }
 }
 

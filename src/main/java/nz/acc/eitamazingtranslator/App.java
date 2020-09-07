@@ -1,7 +1,5 @@
-package nz.acceitamazingtranslator;
+package nz.acc.eitamazingtranslator;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**

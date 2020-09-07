@@ -43,7 +43,7 @@ public class App
         try {
             System.out.println(dictionaries.getTranslationOf(number, option));
         } catch (LanguageNotSupportedException e) {
-            System.out.println("Only french and german supported");
+            System.out.println(e.getMessage());
         } catch (NumberOutOfRangeException e) {
             System.out.println("Number should be between 1 and 30 included");
         }

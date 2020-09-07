@@ -1,4 +1,4 @@
-package nz.acc.eitamazingtranslator;
+package nz.ac.eit.amazingtranslator;
 
 public class NumberOutOfRangeException extends Exception{
 }
